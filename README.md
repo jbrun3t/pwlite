@@ -14,7 +14,8 @@ for patch in client.patches(state="new"):
 - `patches()`, `events()`, `users()`: patchwork's filters as keyword arguments,
   paging through the results
 - `project()`: the project, failing when patchwork does not know it
-- `patch(id=…)`: one patch, refused if it belongs to another project
+- `patch(id=…)`, `series(id=…)`: one document, refused if it belongs to another
+  project
 - `update_patch(id=…, **fields)`: writes the fields, with a token; nothing with
   `dry_run=True`
 - errors raise `PwError`

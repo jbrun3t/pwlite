@@ -132,6 +132,10 @@ class Client:
     def patch(self, *, id: int) -> dict:
         return self._document(f"patches/{id}")
 
+    @_in_project
+    def series(self, *, id: int) -> dict:
+        return self._document(f"series/{id}")
+
     def events(self, **params: object) -> Iterator[dict]:
         """Yield the project's events, newest first."""
         return self._list("events", project=self._project, **params)
