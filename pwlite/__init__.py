@@ -153,3 +153,13 @@ class Client:
             self._request("PATCH", f"{self._url}/patches/{id}/", json=fields)
         except PwError as e:
             raise PwError(f"cannot update {fields}: {e}") from e
+
+    def create_check(self, *, id: int, **fields: object) -> None:
+        """Add a check to a patch, fields as patchwork spells them. A dry run writes nothing."""
+        if self._dry_run:
+            return
+
+        try:
+            self._request("POST", f"{self._url}/patches/{id}/checks/", json=fields)
+        except PwError as e:
+            raise PwError(f"cannot add check {fields}: {e}") from e

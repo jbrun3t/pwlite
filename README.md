@@ -18,6 +18,8 @@ for patch in client.patches(state="new"):
   project
 - `update_patch(id=…, **fields)`: writes the fields, with a token; nothing with
   `dry_run=True`
+- `create_check(id=…, **fields)`: adds a check to a patch, with a token; nothing
+  with `dry_run=True`
 - errors raise `PwError`
 
 ## Install
