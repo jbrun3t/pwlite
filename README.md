@@ -11,8 +11,8 @@ for patch in client.patches(state="new"):
     print(patch["id"], patch["name"])
 ```
 
-- `patches()`, `events()`, `users()`: patchwork's filters as keyword arguments,
-  paging through the results
+- `patches()`, `covers()`, `events()`, `users()`: patchwork's filters as keyword
+  arguments, paging through the results
 - `project()`: the project, failing when patchwork does not know it
 - `patch(id=…)`, `series(id=…)`: one document, refused if it belongs to another
   project

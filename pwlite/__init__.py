@@ -128,6 +128,9 @@ class Client:
     def patches(self, **params: object) -> Iterator[dict]:
         return self._list("patches", project=self._project, **params)
 
+    def covers(self, **params: object) -> Iterator[dict]:
+        return self._list("covers", project=self._project, **params)
+
     @_in_project
     def patch(self, *, id: int) -> dict:
         return self._document(f"patches/{id}")

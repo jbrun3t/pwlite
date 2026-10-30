@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pwlite"
-version = "0.2.1"
+version = "0.2.2"
 description = "A small client for the Patchwork REST API"
 readme = "README.md"
 license = "MIT"
